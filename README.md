@@ -7,9 +7,9 @@
 ```bash
 docker run -it --name ya_disk \
     -u 1000 \
+    --restart=always \
     -e "USER=login@domen" \
     -e "PASSWORD=your_password" \
-    -e "OPTIONS=" \
     -v "${PWD}/disk:/data" \
     quickes/yandex:disk start
 ```
